@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const AuthModal= ({setShowModal}) => {
+const AuthModal= ({setShowModal, setIsSignUp, isSignUp}) => {
     const [ email, setEmail ] = useState(null)
     const [ password, setPassword ] = useState(null)
     const [ confirmPassword, setConfirmPassword ] = useState(null)
@@ -8,15 +8,23 @@ const AuthModal= ({setShowModal}) => {
 
     console.log(email, password, confirmPassword)
 
+
     const handleClick = () => {
         setShowModal(false)
     }
 
     const handleSubmit = (e) => {
         e.preventDeafault()
+        try {
+            if( isSignUp && ( password !== confirmPassword)) {
+                setError('Passwords need to match!')
+            }
+            console.log('make a post request to DB')
+        } catch (error) {
+            console.log(error)
+        }
     }
 
-    const isSignUp = true
     return (
         <div className="auth-modal">
             <div className="close-icon" onClick={handleClick}>X</div>
@@ -39,14 +47,14 @@ const AuthModal= ({setShowModal}) => {
                     required={true}
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <input
+                {isSignUp && <input
                     type="password"
                     id= "password-confirm"
                     name= "password-confirm"
                     placeholder="confirm password"
                     required={true}
                     onChange={(e) => setConfirmPassword(e.target.value)}
-                />
+                />}
                 <input className='secondary-button' type="submit"/ >
                 <p>{error}</p>
             </form>
