@@ -105,7 +105,7 @@ const Onboarding = () => {
                         />
 
                         <label>Show me</label>
-                        <div className='multiple-input-conatiner'>
+                        <div className='multiple-input-container'>
                             <input
                                 id='man-gender-interest'
                                 type='radio'
