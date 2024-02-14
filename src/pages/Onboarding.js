@@ -115,11 +115,11 @@ const Onboarding = () => {
                                 id="more-gender-identity"
                                 type="radio"
                                 name="gender_identity"
-                                value="everyone"
+                                value="more"
                                 onChange={handleChange}
-                                checked={formData.gender_identity === "everyone"}
+                                checked={formData.gender_identity === "more"}
                             />
-                            <label htmlFor="everyone-gender-identity">More</label>
+                            <label htmlFor="more-gender-identity">More</label>
                         </div>
 
                         <label htmlFor="show-gender">Show Gender on my Profile</label>
