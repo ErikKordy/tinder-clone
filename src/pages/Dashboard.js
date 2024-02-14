@@ -1,6 +1,9 @@
 import TinderCard from "react-tinder-card"
 import { useState } from "react"
 import ChatContainer from '../components/ChatContainer'
+import ChatDisplay from "../components/ChatDisplay"
+import ChatHeader from "../components/ChatHeader"
+import MatchesDisplay from "../components/MatchesDisplay"
 
 const Dashboard = () => {
     const characters = [
