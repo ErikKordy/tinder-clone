@@ -1,9 +1,7 @@
 import TinderCard from "react-tinder-card"
 import { useState } from "react"
 import ChatContainer from '../components/ChatContainer'
-import ChatDisplay from "../components/ChatDisplay"
-import ChatHeader from "../components/ChatHeader"
-import MatchesDisplay from "../components/MatchesDisplay"
+
 
 const Dashboard = () => {
     const characters = [
@@ -45,7 +43,6 @@ const Dashboard = () => {
             <ChatContainer />
             <div className="swipe-container">
                 <div className="card-container">
-
                     {characters.map((character) =>
                         <TinderCard
                             className='swipe'
