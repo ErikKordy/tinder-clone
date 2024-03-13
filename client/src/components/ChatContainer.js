@@ -2,6 +2,8 @@ import ChatDisplay from "../components/ChatDisplay"
 import ChatHeader from "../components/ChatHeader"
 import MatchesDisplay from "../components/MatchesDisplay"
 
+
+
 const ChatContainer = ({ user }) => {
     return (
     <div className="chat-container">

@@ -4,9 +4,9 @@ const ChatHeader= ({ user }) => {
     const [cookies, setCookie, removeCookie] = useCookies(['user'])
 
     const logout = () => {
-        removeCookie('UserId', cookies.UserId)
-        removeCookie('Authtoken', cookies.AuthToken)
-        window.location.href ='/login'
+        removeCookie('UserId')
+        removeCookie('AuthToken')
+        window.location.reload()
     }
 
     if (!user || !user.url) {
